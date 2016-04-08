@@ -159,7 +159,7 @@ func letsUseDefer() {
 }
 
 // HowDoYouReturnErrors indicates error with return value
-func HowDoYouReturnErrors(wantError bool) (string, err) {
+func HowDoYouReturnErrors(wantError bool) (string, error) {
 	if wantError {
 		return "", errors.New("if you must... here is an error")
 	} else {
