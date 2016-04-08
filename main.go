@@ -190,8 +190,8 @@ type Currency float64
 type currency float64
 
 // GetNamer is interface which requires a single method GetName, which must take no parameters and return string
-type GetNamer interface {
-	GetName() string
+type Namer interface {
+	Name() string
 }
 
 // Animal is a new type, a struct
@@ -199,9 +199,14 @@ type Animal struct {
 	name string // animal's name (lowercase == private field)
 }
 
-// GetName is a method on Animal
-func (a Animal) GetName() string {
+// GetName is a getter method; we don't use "Get" prefix in Go
+func (a Animal) Name() string {
 	return a.name
+}
+
+// SetName is a setter method
+func (a Animal) SetName(newName string) {
+	a.name = newName
 }
 
 // Cat is a struct with anonymouse field. Fields and methods are inherited from Animal.
@@ -218,8 +223,8 @@ func TryToGetName(obj interface{}) string {
 	switch o := obj.(type) {
 	default:
 		return "unnamed"
-	case GetNamer:
-		return o.GetName()
+	case Namer:
+		return o.Name()
 	case fmt.Stringer:
 		return o.String()
 	}
