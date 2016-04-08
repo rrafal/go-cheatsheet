@@ -1,4 +1,8 @@
-// Welcome! Let's start main package so we'll get executable binary.
+/*
+Welcome! Let's start main package so we'll get executable binary.
+
+By the way, this is where we write package comment.
+*/
 package main
 
 // This is how we import code from other packages.
