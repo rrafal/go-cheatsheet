@@ -95,7 +95,7 @@ func letsDoConditional() {
 	}
 }
 
-// letsDoLoops shows how we can loop over collection
+// letsDoLoops runs "for" statement a couple of ways
 func letsDoLoops(start, stop int) int {
 	sum := 0
 
@@ -128,7 +128,7 @@ func letsDoLoops(start, stop int) int {
 	return sum
 }
 
-// letsDoSwitch shows how to use switch statement
+// letsDoSwitch uses switch statement
 func letsDoSwitch() {
 	// traditional way
 	name := runtime.GOOS
@@ -154,7 +154,7 @@ func letsUseDefer() {
 	fmt.Print("Hello ")
 }
 
-// HowDoYouReturnErrors shows how Go returns errors from functions.
+// HowDoYouReturnErrors indicates error with return value
 func HowDoYouReturnErrors(wantError bool) (string, err) {
 	if wantError {
 		return "", errors.New("if you must... here is an error")
