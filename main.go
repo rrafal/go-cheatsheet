@@ -165,8 +165,8 @@ func HowDoYouReturnErrors(wantError bool) (string, err) {
 
 // Vertex is a simple struct
 type Vertex struct {
-	X int
-	Y int
+	X int // X cordinate (uppercase == public field)
+	Y int // Y cordinate
 }
 
 // String is a method which implements Stringer interface and returns string representation of an object
@@ -192,8 +192,7 @@ type GetNamer interface {
 
 // Animal is a new type, a struct
 type Animal struct {
-	// private field (lower case)
-	name string
+	name string // animal's name (lowercase == private field)
 }
 
 // GetName is a method on Animal
